@@ -11,53 +11,20 @@ public class TestMaximum {
     public void setUp() throws Exception {
         maximum = new Maximum();
     }
-
     @Test
-    public void checkMax_At_FirstPosition() {
-        int valueToCheck =  Maximum.testMax(5,3,4);
-        Assert.assertEquals(5, valueToCheck);
-    }
-
-    @Test
-    public void checkMax_At_SecondPosition() {
-        int valueToCheck =  Maximum.testMax(5,8,4);
-        Assert.assertEquals(8, valueToCheck);
-    }
-
-    @Test
-    public void checkMax_At_ThirdPosition() {
-        int valueToCheck =  Maximum.testMax(5,3,8);
+    public void checkMax_Of_Integer() {
+        int valueToCheck =  Maximum.testMax(5,8,4,1,0,5);
         Assert.assertEquals(8, valueToCheck);
     }
     @Test
-    public void checkMax_Of_Float_AtFirstPosition() {
-        float valueToCheck =  Maximum.testMax(5.0f,3.0f,4.0f);
+    public void checkMax_Of_Float() {
+        float valueToCheck =  Maximum.testMax(5.0f,3.0f,4.0f,1.2f);
         Assert.assertEquals(5.0f, valueToCheck,0.0);
     }
 
     @Test
-    public void checkMax_Of_Float_AtSecondPosition() {
-        float valueToCheck =  Maximum.testMax(5.0f,8.0f,4.0f);
-        Assert.assertEquals(8.0, valueToCheck,0.0);
-    }
-
-    @Test
-    public void checkMax_Of_Float_AtThirdPosition() {
-        float valueToCheck =  Maximum.testMax(5.0f,3.0f,8.0f);
-        Assert.assertEquals(8.0, valueToCheck,0.0);
-    }
-    @Test
-    public void checkMax_Of_String_AtFirstPosition() {
-        String valueToCheck =  Maximum.testMax("Peach","Banana","Apple");
-        Assert.assertEquals("Peach",valueToCheck);
-    }
-    @Test
-    public void checkMax_Of_String_AtSecondPosition() {
-        String valueToCheck =  Maximum.testMax("Banana","Peach","Apple");
-        Assert.assertEquals("Peach",valueToCheck);
-    } @Test
-    public void checkMax_Of_String_AtThirdPosition() {
-        String valueToCheck =  Maximum.testMax("Apple","Banana","Peach");
-        Assert.assertEquals("Peach",valueToCheck);
+    public void checkMax_Of_String() {
+        String valueToCheck =  Maximum.testMax("Apple","Banana","Peach","Pear");
+        Assert.assertEquals("Pear",valueToCheck);
     }
 }
