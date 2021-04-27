@@ -1,30 +1,16 @@
 package com.bridgelabz;
-public class Maximum {
-    public Integer testMax(Integer x, Integer y, Integer z) {
-    Integer max = x;
-    if (y.compareTo(max) > 0) {
-        max = y;
-        }if (z.compareTo(max) > 0) {
-        max = z;
+public class Maximum <E extends Comparable> {
+
+        public static <E extends Comparable> E testMax(E x, E y, E z) {
+            if (x.compareTo(y) > 0) {
+                if (x.compareTo(z) > 0) {
+                    return x;
+                }
+            }
+            if (y.compareTo(z) > 0) {
+                return y;
+            }
+            return z;
         }
-    return max;
     }
-    public Float testMax(Float x, Float y, Float z) {
-        Float max = x;
-        if (y.compareTo(max) > 0) {
-            max = y;
-        }if (z.compareTo(max) > 0) {
-            max = z;
-        }
-        return max;
-    }
-    public String testMax(String x, String y, String z){
-        String max = x;
-        if (y.compareTo(max) > 0) {
-            max = y;
-        }if (z.compareTo(max) > 0) {
-            max = z;
-        }
-        return max;
-    }
-}
+
