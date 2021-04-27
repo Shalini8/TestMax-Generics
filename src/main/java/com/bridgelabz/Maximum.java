@@ -1,26 +1,26 @@
 package com.bridgelabz;
 
-public class Maximum <T extends Comparable <T>>{
-    T x,y,z;
+public class Maximum <T extends Comparable <T>> {
+    T x, y, z;
 
     public Maximum() {
         this.x = x;
         this.y = y;
         this.z = z;
     }
-    public T testMax(){
-        return Maximum.testMax(x,y,z);
-    }
-    public static <E extends Comparable> E testMax(E x, E y, E z) {
-            if (x.compareTo(y) > 0) {
-                if (x.compareTo(z) > 0) {
-                    return x;
-                }
-            }
-            if (y.compareTo(z) > 0) {
-                return y;
-            }
-            return z;
+
+
+    public static <T extends Comparable<T>> T testMax(T x, T y, T z) {
+        T max = x;
+        if (y.compareTo(max) > 0) {
+            max = y;
         }
+        if (z.compareTo(max) > 0) {
+            max = z;
+        }
+        return max;
     }
+}
+
+
 
