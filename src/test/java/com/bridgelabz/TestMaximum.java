@@ -14,15 +14,15 @@ public class TestMaximum {
     @Test
     public void checkMaxAtSecondPosition() {
         Maximum maximum = new Maximum();
-        int valueToCheck = maximum.testMax(5,3,4);
-        Assert.assertEquals(3, valueToCheck);
+        int valueToCheck = maximum.testMax(5,8,4);
+        Assert.assertEquals(8, valueToCheck);
     }
 
     @Test
     public void checkMaxAtThirdPosition() {
         Maximum maximum = new Maximum();
-        int valueToCheck = maximum.testMax(5,3,4);
-        Assert.assertEquals(4, valueToCheck);
+        int valueToCheck = maximum.testMax(5,3,8);
+        Assert.assertEquals(8, valueToCheck);
     }
 
 
