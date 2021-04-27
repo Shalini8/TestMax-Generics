@@ -11,16 +11,20 @@ public class TestMaximum {
     public void setUp() throws Exception {
         maximum = new Maximum();
     }
+    // @Method checks for an Maximum Of a Integer value
     @Test
     public void checkMax_Of_Integer() {
         int valueToCheck =  Maximum.testMax(5,8,4,1,0,5);
         Assert.assertEquals(8, valueToCheck);
     }
+    // @Method checks for an Maximum Of a Float value
+
     @Test
     public void checkMax_Of_Float() {
         float valueToCheck =  Maximum.testMax(5.0f,3.0f,4.0f,1.2f);
         Assert.assertEquals(5.0f, valueToCheck,0.0);
     }
+    // @Method checks for an Maximum Of a String value
 
     @Test
     public void checkMax_Of_String() {
