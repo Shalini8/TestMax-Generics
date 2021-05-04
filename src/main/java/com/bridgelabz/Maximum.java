@@ -13,7 +13,8 @@ public class Maximum <T extends Comparable <T>> {
         printMax(max);
         return max;
     }
-    private static <T> void printMax(T max){
+    private static <T> void printMax(T max)
+    {
         System.out.println("Maximum is : " +max );
     }
 }
